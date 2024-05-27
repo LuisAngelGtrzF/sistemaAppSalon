@@ -1,0 +1,33 @@
+@use 'base/mixins' as m;
+@use 'base/variables' as v;
+
+.trabajadores {
+    margin: 0 auto 5rem 0;
+    &__grid{
+        @include m.contenedor;
+        @include m.grid(1, 5rem);
+        @include m.tablet {
+            @include m.grid(2, 5rem);
+        }
+        @include m.xl_desktop {
+            @include m.grid(3, 5rem);
+            align-items: flex-start;
+        }
+    }  
+}
+.trabajador{
+    @include m.card;
+
+    &__listado-skills {
+        @include m.tags;  
+    }
+
+   
+}
+
+.trabajador-sociales {
+    @include m.menu-social(v.$negro, 3rem);
+    display: flex;
+    gap: 2rem;
+    margin-top: 2rem;
+}

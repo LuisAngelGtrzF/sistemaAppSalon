@@ -1,0 +1,32 @@
+@use 'base/mixins' as m;
+@use 'base/variables' as v;
+
+.bienvenida {
+    text-align: center;
+    &__heading {
+        @include m.headingCursiva;
+    }
+    &__texto {
+        font-size: 2.6rem;
+        color: v.$gris;
+        max-width: 50rem;
+        margin: 4rem auto;
+        line-height: 1.8;
+        font-weight: v.$delgada;    
+    }
+}
+.trabajadores{
+    &__heading {
+        @include m.headingCursiva;
+    }
+    &__descripcion {
+        font-size: 2.6rem;
+        color: v.$gris;
+        max-width: 50rem;
+        margin: 4rem auto;
+        line-height: 1.8;
+        font-weight: v.$delgada;    
+
+    }
+
+}

@@ -1,0 +1,80 @@
+@use 'base/variables' as v;
+@use 'base/mixins' as m;
+
+.catalogo {
+    padding: 5rem 0;
+    @include m.contenedor;
+}
+    
+
+    .productos {
+    
+        &__heading{
+            color: v.$rosa;
+            margin: 5rem 0;
+            text-align: left;
+            font-size: clamp(3rem, -0.8rem + 8vw, 6rem);
+        }
+        &__categoria{
+         color: v.$gris;
+            margin: 3rem 0 4rem 0;
+        }
+        .swiper-button-next,
+        .swiper-button-prev {
+        color: rgba(v.$rosa, .5);
+        }
+
+        .producto {
+
+            &__informacion {
+            display: flex;
+            flex-direction: column;
+            align-content: center;
+            align-items: center;
+            padding:5rem;
+            border: 4px solid v.$gris-claro;
+            border-radius: 1rem;
+            background-color: v.$blanco;
+            color: v.$negro;
+            transition: 300ms background-color ease;
+            
+            .dashboard__boton {
+                background-color: v.$coral;
+                &:hover {
+                    background-color: darken(v.$coral, 3%);
+                }
+            }
+            
+            &:hover {
+                background-color: darken(v.$gris-claro, 5%);
+            }
+
+            
+
+        }
+
+        &__imagen-info {
+            gap: 2rem;
+            width: 18rem;
+        }
+
+        &__nombre {
+            font-weight: v.$delgada;
+            display: -webkit-box;
+            -webkit-line-clamp: 1;
+            -webkit-box-orient: vertical;
+            overflow: hidden;       
+        }
+
+        
+        &__precio {
+            margin-bottom: 2rem;
+            font-weight: v.$bold;      
+        }
+
+    }
+        
+    }
+
+    
+
